@@ -1,0 +1,2 @@
+# edu-project
+Education checking
