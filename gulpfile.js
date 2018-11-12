@@ -6,14 +6,14 @@
 // gulp
 // gulp-if
 // browser-sync
-var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var cleanCss = require('gulp-clean-css');
-var sass = require('gulp-sass');
-var gulpIf = require('gulp-if');
-var browserSync = require('browser-sync').create();
+var gulp         = require('gulp'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+    concat       = require('gulp-concat'),
+    cleanCss     = require('gulp-clean-css'),
+    sass         = require('gulp-sass'),
+    gulpIf       = require('gulp-if'),
+    browserSync  = require('browser-sync');
 
 var config = {
     paths:{
@@ -22,35 +22,38 @@ var config = {
     },
     output:{
       cssName: 'main-style.min.css',
-      path: './assets/css'
+      path: './assets/css/'
     },
-    isDevelop:  ture
+    // isDevelop:  ture
 
 };
 
 
-gulp.task('scss',function(){
-    return gulp.src(config.paths.scss)
-            .pipe(gulpIf(config.isDevelop, sourcemaps.init()))
-            .pipe(sass())
-            .pipe(concat(config.output.cssName))
-            .pipe(autoprefixer())
-            .pipe(gulpIf(config.isDevelop, sourcemaps.write()))
-            .pipe(gulpIf(config.isDevelop, cleanCss()))
-            .pipe(gulp.dest(config.output.path))
-            .pipe(browserSync.stream());
+gulp.task('sass',function(){
+  return gulp.src(config.paths.scss)
+    .pipe(sass())
+    // .pipe(concat(config.output.cssName)) // min should be in other gulp tast,  exp: gulp.task('cssMin')...
+    // the same for concat
+    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
+    .pipe(gulpIf(config.isDevelop, sourcemaps.write()))
+    .pipe(gulp.dest(config.output.path))
 });
 
-gulp.task('serve', function(){
-            browserSync.init({
-                server:{
-                  baseDir:config.output.path
-                }
-            });
-
-            gulp.watch(config.paths.scss, ['scss,']);
-            gulp.watch(config.paths.html).on('change', browserSync.reload);
-
+/* browser sync task */
+gulp.task('browser-sync', function() {
+	browserSync({
+		server: {
+			baseDir: './'
+		},
+		notify: false
+	});
 });
 
-gulp.task('default', ['scss', 'serve']);
+/* dev mode */
+gulp.task('watch', ['browser-sync', 'sass'], function() {
+	gulp.watch(config.paths.scss, ['sass']);
+	gulp.watch('./*.html', browserSync.reload);
+});
+
+// Run "gulp default" - will start your developer mode
+gulp.task('default', ['sass', 'watch']);
