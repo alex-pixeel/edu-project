@@ -10,6 +10,9 @@ body {
   background-repeat: repeat;
   padding: 0;
   margin: 0;
+  h4{
+    font-style: italic;
+  }
 
   //======  Swiper Slider   ======
 
@@ -765,6 +768,7 @@ body {
     }
 
     .smooth-line {
+      clear: both;
       height: 10px;
       background-color: #78371B;
       background-image: url(../img/smooth-linebg.jpg);
@@ -984,8 +988,6 @@ body {
       height: 4px;
       background-image: url(../img/rough-blue-linebg.jpg);
       background-repeat: repeat-x;
-      //background-color: #ABAA97;
-      //border-bottom: 1px solid #D0CEAB;
       position: relative;
 
       img {
@@ -1390,21 +1392,268 @@ body {
 
 
   ////////================================== CONTACT PAGE ==================================////////
-  .wrapper{
-    &-headerC{
+  .wrapper {
+    &-headerC {
       margin-bottom: 0;
 
-      &__diractionC{
+      &__diractionC {
         margin-bottom: 0;
         padding-bottom: 0;
         border: 0;
       }
     }
-    &-header-gmap{
+
+    &-header-gmap {
+      padding: 0;
       width: 100%;
-      height: 200px;
-      background: #cda;
+      background: #242729;
+      iframe{
+        width: 100%;
+        border:0;
+        height: 400px;
+      }
     }
+
+    &-header-comments__gizmodoC {
+      margin-right: 0;
+      width: 25%;
+
+      @media only screen and (max-width: 720px) {
+        width: 50%;
+      }
+    }
+
+    &-headerC-contact {
+      @media only screen and (max-width: 992px) {
+        li {
+          font-size: .65em !important;
+        }
+      }
+
+      @media only screen and (max-width: 720px) {
+        h1 {
+          font-size: 1.5em;
+        }
+
+        h4 {
+          font-size: .8125em;
+        }
+
+        li {
+          font-size: 1.1em !important;
+        }
+      }
+
+      h1 {
+        color: #8E4423;
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          list-style-type: none;
+          color: #7b7a6d;
+          font-size: .825em;
+
+          a {
+            text-decoration: none;
+            color: #8E4423;
+
+            &:hover {
+              transition: all .4s ease-in-out;
+              color: #7b7a6d;
+            }
+          }
+        }
+      }
+    }
+
+    .pr {
+      padding-left: 40px;
+      padding-right: 40px;
+      border: 0;
+    }
+
+    .rough-lineC {
+      height: 18px;
+      background-image: url(../img/rglinePattC.jpg);
+      background-repeat: repeat-x;
+      position: relative;
+
+      img:nth-child(1) {
+        position: absolute;
+        left: 34%;
+        top: 7px;
+      }
+
+      img:nth-child(2) {
+        position: absolute;
+        left: 62%;
+        top: 7px;
+      }
+    }
+
+    &-form-block {
+      @include clearfix;
+      background-color: #2C2E2F;
+      height: 400px;
+      padding: 40px 40px 60px 40px;
+      @media only screen and (max-width:830px){
+        padding:40px 40px 80px 40px;
+      }
+      @media only screen and (max-width:720px){
+        padding-bottom: 150px;
+      }
+      @media only screen and (max-width:540px){
+        padding-bottom: 440px;
+        &__thanks, &__speak{
+          float: none!important;
+          width: 100%!important;
+        }
+      }
+      @media only screen and (max-width:440px){
+        padding-bottom: 500px;
+      }
+      @media only screen and (max-width:408px){
+        padding-bottom: 530px;
+      }
+
+      &__thanks {
+        float: left;
+        width: 48%;
+        padding: 0 2% 0 0;
+
+        &-video {
+          width: 100%;
+          height: 150px;
+          border: 4px solid #843E20;
+          margin-bottom: 20px;
+        }
+        a{
+          display: block;
+          text-decoration: none;
+          &:hover h1{
+            transition: all .4s ease-in-out;
+            color: #7b7a6d;          
+          }
+        }
+
+        i {
+          color: #fff;
+          font-size: 2.125em;
+          margin-right: 8px;
+        }
+        h1{
+          @include font-heading;
+          margin-top: -36px;
+          margin-left: 50px;
+          display: block;
+          font-size: 1.425em;
+          color: #8E4423;
+          transition: all .4s ease-in-out;
+
+        }
+        h4{
+          font-size: 0.55em;
+          display: block;
+          margin: -15px 0px 20px 49px;
+          color: #646363;
+        }
+        p{
+          font-size: .85em;
+          color: #7b7a6d;
+          margin-top: 2px;
+          line-height: 1.4;
+          margin-bottom: 4px;
+        }
+        h2{
+          @include font-heading;
+          color: #fff;
+          font-style: italic;
+          text-align: center;
+          margin-bottom: 5px;
+          font-weight: normal;
+          font-size: 2em;
+        }
+        h5{
+          color: #7b7a6d;
+          font-style: italic;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      &__speak {
+        float: left;
+        width: 48%;
+        padding: 0 0 0 2%;
+        h1{
+          color: #fff;
+          font-style: italic;
+          margin-bottom: 15px;
+          font-weight: normal;
+        }
+        p{
+          font-size: .85em;
+          color: #7b7a6d;
+          margin-top: 2px;
+          line-height: 1.4;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #0D0D0E;
+          margin-bottom: 0;
+        }
+        form{
+          border-top: 1px solid #41403A;
+          padding-top: 20px;
+         
+          input:nth-child(1), textarea{
+            padding: 10px;
+            color: #7b7a6d;
+            background-color: #2C2E2F;
+            border: 1px solid #636465;
+            box-shadow: 0px 0px 6px 2px #000000a6 inset;
+            border-radius: 6px;
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+          }
+          input:nth-child(3){
+            @include text-shadow;
+            padding: 5px 25px;
+            color: #e6e3bb;
+            background-image: url(../img/submitbg.jpg);
+            background-repeat: repeat-x;
+            border-radius: 6px;
+            border:0;
+            box-shadow: 1px 1px 9px -4.1px #000;
+            float: right;
+            transition: all .4s ease-in-out;
+            cursor: pointer;
+            &:hover{
+              color: darken(#e6e3bb,10%);
+              transition: all .3s ease-in-out;
+              box-shadow: 1px 1px 9px -3.1px #000;
+
+            }
+          }
+          textarea{
+            max-width: 100%;
+            min-width: 100%;
+            max-height: 100px;
+            min-height: 100px;
+            margin-bottom: 20px;
+            
+          }
+
+          input:focus{
+            
+          }
+        }
+      }
+    }
+
   }
 
 
