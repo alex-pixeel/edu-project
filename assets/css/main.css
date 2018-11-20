@@ -1035,6 +1035,16 @@ body {
       width: 100%;
       height: 300px;
       background: rgba(116, 146, 5, 0.589); }
+  body .wrapper-headerC {
+    margin-bottom: 0; }
+    body .wrapper-headerC__diractionC {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: 0; }
+  body .wrapper-header-gmap {
+    width: 100%;
+    height: 200px;
+    background: #cda; }
   @media only screen and (max-width: 992px) {
     body .wrapper-tab__tabs_con-features {
       width: 100%;
