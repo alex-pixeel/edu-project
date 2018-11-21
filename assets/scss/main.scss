@@ -1354,7 +1354,8 @@ body {
         background-repeat: repeat-x;
         padding-top: 1px;
         margin-bottom: 30px;
-        @media only screen and(max-width:992px){
+
+        @media only screen and(max-width: 992px) {
           margin-left: 0;
         }
 
@@ -1396,10 +1397,12 @@ body {
 
           &-blocks:nth-child(2n) {
             margin-right: 0;
-            h1{
+
+            h1 {
               margin-left: 26px;
             }
-            h4{
+
+            h4 {
               margin-left: 28px;
             }
           }
@@ -1409,18 +1412,21 @@ body {
             width: 45%;
             margin-right: 5%;
             margin-bottom: 30px;
-            @media only screen and (max-width:992px){
+
+            @media only screen and (max-width: 992px) {
               width: 100%;
             }
 
             a {
               text-decoration: none;
-              &:hover p{
-                color:#fff;
-               transition: all .4s ease-in-out;
+
+              &:hover p {
+                color: #fff;
+                transition: all .4s ease-in-out;
               }
-              &:hover h1{
-                color:#fff;
+
+              &:hover h1 {
+                color: #fff;
                 transition: all .4s ease-in-out;
               }
             }
@@ -1465,26 +1471,52 @@ body {
               transition: all .4s ease-in-out;
             }
           }
-          &-paginagtion{
+
+          &-paginagtion {
             height: 60px;
             width: 100%;
             float: left;
-            text-align:center;
+            text-align: center;
             margin-bottom: 15px;
-              
-              a{
-                text-decoration: none;
-                color:#8e4423;
-              }
-              a:nth-child(2){
-                color: #fff;
-              }
-              img{
-                margin: 8px;
-                margin-bottom: -12px;
-              }
+
+            a {
+              text-decoration: none;
+              color: #8e4423;
+            }
+
+            a:nth-child(2) {
+              color: #fff;
+            }
+
+            img {
+              margin: 8px;
+              margin-bottom: -12px;
+            }
           }
         }
+      }
+    }
+  }
+
+  ////////================================== WORK PAGE ITEM ==================================////////
+  .wrapper {
+    .wrapper-content {
+      padding: 0 0 40px 40px;
+
+      &__krilli {
+        outline: 1px solid red;
+        width: 80%;
+        float: left;
+        height: 300px;
+        padding-right: 40px;
+      }
+
+      &__wpi {
+        width: 20%;
+        outline: 1px solid yellow;
+        float: left;
+        height: 300px;
+        padding: 0 5px;
       }
     }
   }

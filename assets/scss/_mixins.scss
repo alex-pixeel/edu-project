@@ -1,13 +1,12 @@
               //================FONTS=============
-//   font-family: 'Open Sans', sans-serif; -- > for text
-//   font-family: 'Montserrat', sans-serif; -- > for headings
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+//   font-family: 'OpenSansRegular', sans-serif; -- > for text
+//   font-family: 'MontserratRegular', sans-serif; -- > for headings
 @mixin font-text{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OpenSansRegular', sans-serif;
 }
 
 @mixin font-heading{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'MontserratRegular', sans-serif;
 }
 
           //================TEXT SHADOW=============
