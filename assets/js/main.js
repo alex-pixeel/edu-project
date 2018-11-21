@@ -2,6 +2,17 @@ function myFunction(x) {
   x.classList.toggle("change");
 }
 
+
+
+
+
+
+
+
+
+
+
+/*
 function myFunk(x) {
   x.classList.toggle("tabblock");
 }
@@ -25,3 +36,5 @@ function mix(x, pageName, elmnt, color) {
   myFunk(x);
   openPage(pageName, elmnt, color);
 }
+
+*/
