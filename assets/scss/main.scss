@@ -1952,6 +1952,7 @@ body {
   ////////================================== BLOG PAGE ==================================////////
   .wrapper {
     &-content__krilliB {
+      width: 63%!important;
       h1 {
         position: relative;
 
@@ -1991,6 +1992,9 @@ body {
       }
     }
 
+    .fixblog{
+      width:280px;
+    }
     .tab_itemB {
       padding-bottom: 175px !important;
 
