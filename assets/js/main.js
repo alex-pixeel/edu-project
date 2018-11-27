@@ -10,8 +10,6 @@ function myFunction(x) {
 
 
 
-
-
 /*
 function myFunk(x) {
   x.classList.toggle("tabblock");

@@ -1341,7 +1341,6 @@ body {
     }
 
     &-tabBlock {
-      height: 500px;
       padding: 10px 40px 40px 40px;
 
       &__buttons {
@@ -1394,6 +1393,9 @@ body {
         .tab_item {
           width: 100%;
           color: #ffffff;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
 
           &-blocks:nth-child(2n) {
             margin-right: 0;
@@ -1408,13 +1410,11 @@ body {
           }
 
           &-blocks {
-            float: left;
-            width: 45%;
-            margin-right: 5%;
+           flex-basis: 47%;
             margin-bottom: 30px;
 
             @media only screen and (max-width: 992px) {
-              width: 100%;
+              flex-basis: 100%;
             }
 
             a {
@@ -1481,12 +1481,12 @@ body {
 
             a {
               text-decoration: none;
-              color: #8e4423;
+             color: #8e4423;
             }
 
-            a:nth-child(2) {
-              color: #fff;
-            }
+           .activePage{
+             color: #ffffff;
+           }
 
             img {
               margin: 8px;
@@ -1747,6 +1747,7 @@ body {
           }
 
           ul {
+            width: 100%;
             margin: 0;
             padding: 0;
             border-top: 1px solid #393B3D;
@@ -1774,6 +1775,7 @@ body {
           }
 
           .etc {
+            width: 100%;
             text-align: center;
             border-top: 1px solid #191A1B;
             margin-top: 0;
@@ -1792,7 +1794,7 @@ body {
           }
 
           h3 {
-            //font-weight: normal;
+            width: 100%;
             font-size: .9em;
             color: #e6e3bb;
             border-bottom: 1px solid #393B3D;
@@ -2017,7 +2019,7 @@ body {
   ////////================================== BLOG  PAGE ITEM ==================================////////
   .wrapper {
     .bpitab {
-      height: 1843px;
+      height:1867px;
 
       @media only screen and (max-width: 992px) {
         height: auto !important;
@@ -2081,7 +2083,7 @@ body {
 
       .lattestComments {
         background-color: #7B7A6D;
-        margin: 0 -38px 1px -40px;
+        margin: 0 -75px 1px -40px;
         padding: 0 40px 20px 40px;
 
         @media only screen and (max-width: 992px) {
@@ -2089,6 +2091,11 @@ body {
 
           .topborder {
             margin: 0 -40px 1px -40px !important;
+          }
+        }
+        @media only screen and (max-width: 600px) {
+          .topborder {
+            margin: 30px -40px 1px -40px !important;
           }
         }
 
@@ -2146,14 +2153,11 @@ body {
 
         h3 {
           padding-top: 5px;
-          position: relative;
           color: #e6e3bb;
           font-size: 1.125em;
-          margin-bottom: 5px;
+          margin-bottom: 0;
 
           span {
-            position: absolute;
-            right: 0;
             color: #2c2e2f;
             font-size: .875em;
             font-style: italic;
@@ -2233,6 +2237,7 @@ body {
               width: 85%;
               height: 200px;
               padding-left: 2%;
+              overflow:auto ;
               border-left: 1px solid #949389;
 
               h3 {
@@ -2838,8 +2843,227 @@ body {
 
   }
 
+    ////////================================== TACKLED STYLES FOR ALL PAGES ==================================////////
+  .wrapper-tab{
+    .htab-buttons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center ;
+      .buttons{
+        @media only screen and (max-width:540px){
+          padding: 10px;
+        }
+        border-radius: 6px 6px 0 0;
+        padding: 10px 20px;
+        border-left: 1px solid rgba(123, 122, 109, 0.07);
+        border-right: 1px solid rgba(123, 122, 109, 0.07);
+        border-bottom: 1px solid #525252;
+        cursor: pointer;
+        background-color: #242729;
+        font-size: 0.75em;
+        color: #5b5b5b;
+        transition: all .4s linear;
+      }
+      .hactive{
+            @include text-shadow;
+            background-color: $content-g-bgcolor;
+            color: $text-active-color;
+            border-bottom: 1px solid rgba(123, 122, 109, .07);
+            font-size: 0.75em;
+            background-image: url(../img/tab-button_bg.png);
+            background-repeat: repeat-x;
+        transition: all .4s linear;
 
+      }
+    }
+    .htab-content{
+      .htab-content-item{
+        border-top: 1px solid rgba(0, 0, 0, 0.966);
+        border-left: 1px solid rgba(123, 122, 109, 0.07);
+        border-right: 1px solid rgba(123, 122, 109, 0.07);
+        border-radius: 6px;
+        background-color: #242729;
+        box-shadow: 1px 1px 9px -2.1px #000;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 20px 60px;
+         @media only screen and (max-width:540px){
+          padding: 20px;
+        }
+        a{
+          transition:all .4s ease-in-out;
+          text-decoration: none;
+          flex:1 1 0;
+          margin-bottom: 15px;
+          @media only screen and (max-width:992px){
+            flex: 1 1 100%;
+          }
+        }
+        a:hover .features-header__icon i{
+          color: #fff;
+          transition:all .4s ease-in-out;
+        }
+        a:hover .features-article p{
+          color: #fff;
+          transition:all .4s ease-in-out;
+        }
+        .features{
+          box-sizing:border-box;
+          padding-right: 20px;
+          &-header{
+            display:flex;
+            justify-content:flex-start;
+            align-items: center;
+            &__icon{
+              i{
+                color: #8E4423;
+                display: block;
+                font-size: 2.5em;
+                margin-right: 10px;
+              }
+            }
 
+            &__heading{
+              h1{
+                @include font-heading;
+                font-size: 1.125em;
+                color: #8E4423;
+                margin: 0;
+              }
+              h4{
+                color: #646363;
+                font-size: 0.55em;
+                margin: 0;
+              }
+            }
+          }
+          &-article{
+            p{
+              font-size: 0.875em;
+              color: #7b7a6d;
+            }
+          }
+        }
+      }
+      .htab-content-item2{
+        .features-header__icon{
+          i{
+            color: #fff;
+          }
+        }
+        .features-article{
+          p{
+            span{
+              color: #8E4423;
+              font-size: 1.2em;
+              font-weight: bold;
+            }
+            span:first-child{
+              margin-right: 5px;
+            }
+            span:last-child{
+              margin-left: 6px;
+            }
+          }
+        }
+      }
+    }
+  
+  }
+
+  .flexbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    &-icon{
+      margin-right: 10px;
+    }
+    &-heading{
+      a{
+        text-decoration: none;
+        span{
+          @include font-heading;
+          display: block;
+          font-size: 1.325em;
+          color: #8E4423;
+          font-weight: bold;
+          margin: 12px 0 0 0 !important;
+        transition: all .4s ease-in-out;
+
+          &:hover{
+            color: #e6e3bb;
+            transition: all .4s ease-in-out;
+          }
+        }
+          
+      }
+      h1{
+        margin: 12px 0 0 0!important;
+      }
+      h4{
+        margin:0  !important;
+      }
+    }
+  }
+
+  .kriliFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap:wrap;
+    margin-bottom: 10px;
+    .aflexbox{
+      display: flex;
+      flex-flow: column;
+      @media only screen and (max-width:540px){
+        flex-flow: row;
+        flex-basis: 100%;
+        justify-content: flex-end;
+        align-items:center;
+        span{
+          margin-right: 5px;
+        }
+      }
+      span{
+        @include font-heading;
+        font-size: 1.325em;
+        color: #8E4423;
+      }
+      .admin{
+        span{
+          color: #646363;
+          font-size: 0.55em;
+        }
+        a{
+          text-decoration: none;
+          color: #e6e3bb;
+          font-weight: normal;
+          font-size: 0.55em;
+          transition: all .4s ease-in-out;
+          &:hover{
+            color: #8E4423;
+            transition: all .4s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .latestflexbox{
+    justify-content: space-between;
+    align-items:flex-end;
+    flex-wrap: wrap;
+    .likedis{
+      @include font-heading;
+      font-style: italic;
+      text-shadow: none !important;
+      font-size: .65em;
+      color: #2c2e2f;
+    }
+  }
 
 
 }

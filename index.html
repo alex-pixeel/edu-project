@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/font.css">
   <script src="assets/js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
   <title>Home page</title>
 </head>
 
@@ -106,9 +107,15 @@
           <img src="assets/img/wrapper-header-img3.jpg" alt="">
         </div>
         <div class="wrapper-header-description">
-          <i class="fa fa-certificate"></i>
-          <h1>Krili havtret hyo gustripast</h1>
-          <h4>Krili havtret hyo gustripast</h4>
+          <div class="flexbox">
+            <div class="flexbox-icon">
+                <i class="fa fa-certificate"></i>
+            </div>
+             <div class="flexbox-heading">
+                <h1>Krili havtret hyo gustripast</h1>
+              <h4>Krili havtret hyo gustripast</h4>
+             </div>
+          </div>
           <p>
             Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend
             orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum. Proin ut erat
@@ -149,98 +156,119 @@
       <!-- END WRAPPER-STEPS -->
       <!-- WRAPPER-TAB -->
       <div class="wrapper-tab">
-        <ul class="wrapper-tab__tabs">
-          <div class="fhandle">
-            <li>
-              <input type="radio" name="tabs" id="tab-1" checked="checked">
-              <label for="tab-1">Latest Press</label>
-              <div class="wrapper-tab__tabs_con">
-                <a href="#">
-                  <div class="wrapper-tab__tabs_con-features m0">
-                    <i class="fa fa-commenting-o"></i>
-                    <h1>Gizmodo</h1>
-                    <h4>Eleifend ni Huthy - 5/20/2011</h4>
-                    <p>
-                      Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus
-                      eleifend.
-                    </p>
-
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="wrapper-tab__tabs_con-features">
-                    <i class="fa fa-film"></i>
-                    <h1>FreelanceSwitch</h1>
-                    <h4>Eleifend ni Huthy - 5/3/2011</h4>
-                    <p>
-                      Pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu
-                    </p>
-
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="wrapper-tab__tabs_con-features">
-                    <i class="fa fa-commenting-o"></i>
-                    <h1>Mashable</h1>
-                    <h4>Eleifend ni Huthy - 5/20/2011</h4>
-                    <p>
-                      Justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend mi ornare
-                      lectus or.
-                    </p>
-
-                  </div>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <input type="radio" name="tabs" id="tab-2">
-              <label for="tab-2">Testimonials</label>
-              <div class="wrapper-tab__tabs_con">
-                <a href="#">
-                  <div class="wrapper-tab__tabs_con-features wrapper-tab__tabs_con-micro">
-                    <i class="fa fa-microphone"></i>
-                    <h1>Jayne W.Smith</h1>
-                    <h4>COO-GalaxySmith,Inc</h4>
-                    <p>
-                      <span>//</span> Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non
-                      laoreet lacus lacus eleifend orci.
-                      Nam tincidunt vestibulum lacus nec pharetra.et lorem.<span>//</span>
-                    </p>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="wrapper-tab__tabs_con-features wrapper-tab__tabs_con-micro mr0">
-                    <i class="fa fa-microphone"></i>
-                    <h1>John M.Doe</h1>
-                    <h4>Director of Marketing -Global Corp</h4>
-                    <p>
-                      <span>//</span> Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non
-                      laoreet lacus lacus eleifend orci.
-                      Nam tincidunt vestibulum lacus nec pharetra.et lorem.<span>//</span>
-                    </p>
-                  </div>
-                </a>
-
-
-              </div>
-            </li>
-
-            <li>
-              <input type="radio" name="tabs" id="tab-3">
-              <label for="tab-3">Blog Posts</label>
-              <div class="wrapper-tab__tabs_con">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, i
-                </p>
-              </div>
-            </li>
+          <div class="htab-buttons">
+              <div class="buttons button1">Latest Press</div>
+              <div class="buttons button2">Testimonials</div>
+              <div class="buttons button3">Blog Posts</div>
           </div>
-        </ul>
+          <div class="htab-content">
+            <div class="htab-content-item">
+              <a href="#">
+                  <div class="features">
+                      <div class="features-header">
+                        <div class="features-header__icon">
+                            <i class="fa fa-commenting-o"></i>
+                        </div>
+                        <div class="features-header__heading">
+                            <h1>Gizmodo</h1>
+                            <h4>Eleifend ni Huthy - 5/20/2011</h4>
+                        </div>
+                      </div>
+                      <div class="features-article">
+                          <p>
+                              
+                      Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus
+                    
+                            </p>
+                      </div>
+                    </div>
+              </a>
+              <a href="#">
+                  <div class="features">
+                      <div class="features-header">
+                        <div class="features-header__icon">
+                            <i class="fa fa-film"></i>
+                        </div>
+                        <div class="features-header__heading">
+                            <h1>FreelanceSwitch</h1>
+                            <h4>Eleifend ni Huthy - 5/20/2011</h4>
+                        </div>
+                      </div>
+                      <div class="features-article">
+                          <p>
+                              Pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu
+                            </p>
+                      </div>
+                    </div>
+              </a>
+              <a href="#">
+                  <div class="features">
+                      <div class="features-header">
+                        <div class="features-header__icon">
+                            <i class="fa fa-commenting-o"></i>
+                        </div>
+                        <div class="features-header__heading">
+                            <h1>Mashable</h1>
+                            <h4>Eleifend ni Huthy - 5/20/2011</h4>
+                        </div>
+                      </div>
+                      <div class="features-article">
+                          <p>
+                              Justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend mi ornare
+                              lectus or.
+                            </p>
+                      </div>
+                    </div>
+              </a>
+            </div>
+            <div class="htab-content-item htab-content-item2">
+                <a href="#">
+                    <div class="features">
+                        <div class="features-header">
+                          <div class="features-header__icon">
+                              <i class="fa fa-microphone"></i>
+                          </div>
+                          <div class="features-header__heading">
+                              <h1>Jayne W.Smith</h1>
+                              <h4>COO-GalaxySmith,Inc</h4>
+                          </div>
+                        </div>
+                        <div class="features-article">
+                            <p>
+                                
+                      <span>//</span> Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non
+                      laoreet lacus lacus eleifend orci.
+                      Nam tincidunt vestibulum lacus nec pharetra.et lorem.<span>//</span>
+                              </p>
+                        </div>
+                      </div>
+                </a>
+                <a href="#">
+                    <div class="features">
+                        <div class="features-header">
+                          <div class="features-header__icon">
+                              <i class="fa fa-microphone"></i>
+                          </div>
+                          <div class="features-header__heading">
+                              <h1>John M.Doe</h1>
+                              <h4>Director of Marketing -Global Corp</h4>
+                          </div>
+                        </div>
+                        <div class="features-article">
+                            <p>
+                               
+                      <span>//</span> Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non
+                      laoreet lacus lacus eleifend orci.
+                      Nam tincidunt vestibulum lacus nec pharetra.et lorem.<span>//</span>
+                              </p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+              <div class="htab-content-item">
+                  Third block
+              </div> 
+          </div>   
       </div>
       <!-- END WRAPPER-TABS -->
       <div class="smooth-line"></div>
@@ -351,6 +379,15 @@
   <!--END WRAPPER  -->
 
   <script src="assets/js/swiper.js"></script>
+  <script>
+      $(document).ready(function () {
+        $(".htab-content-item").not(":first").hide();
+        $(".wrapper .buttons").click(function () {
+          $(".wrapper .buttons").removeClass("hactive").eq($(this).index()).addClass("hactive");
+          $(".htab-content-item").hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass("hactive");
+      });
+    </script>
   <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',

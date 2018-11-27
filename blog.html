@@ -102,30 +102,71 @@
         <!-- KRILI -->
         <div class="wrapper-content__krilli wrapper-content__krilliB">
           <div class="wrapper-content__krilli-img">
-            <img src="assets/img/img1.jpg" alt="">
-          </div>
-          <i class="fa fa-tv"></i>
-          <a href="blogpageitem.html">
-            <h1>Krili havtret hyo gustripast <span>3.30.11</span></h1>
-          </a>
-          <h4>Krili havtret hyo gustripast <span>posted by: <a href="#">Admin</a> </span></h4>
-          <div class="bborder-blog"></div>
+              <img src="assets/img/img1.jpg" alt="">
+            </div>
+            <div class="kriliFlex">
+                <div class="flexbox">
+                    <div class="flexbox-icon">
+                        <i class="fa fa-tv"></i>
+                    </div>
+                     <div class="flexbox-heading">
+                        <a href="blogpageitem.html"><span>Krili havtret hyo gustripast</span></a> 
+                       <h4>Krili havtret hyo gustripast</h4>
+                     </div>
+                  </div>
+                  <div class="aflexbox">  
+                      <span>3.30.11</span>
+                      <div class="admin"> 
+                        <span>posted by: </span> <a href="#">Admin</a>
+                      </div>
+                  </div>
+            </div>
+            <div class="bborder-blog"></div>
+            <div class="wrapper-content__krilli-img">
+                <img src="assets/img/img1.jpg" alt="">
+              </div>
+              <div class="kriliFlex">
+                  <div class="flexbox">
+                      <div class="flexbox-icon">
+                          <i class="fa fa-tv"></i>
+                      </div>
+                       <div class="flexbox-heading">
+                          <a href="blogpageitem.html"><span>Krili havtret hyo gustripast</span></a> 
+                         <h4>Krili havtret hyo gustripast</h4>
+                       </div>
+                    </div>
+                    <div class="aflexbox">  
+                        <span>3.30.11</span>
+                        <div class="admin"> 
+                          <span>posted by: </span> <a href="#">Admin</a>
+                        </div>
+                    </div>
+              </div>
+              <div class="bborder-blog"></div>
+              <div class="wrapper-content__krilli-img">
+                  <img src="assets/img/img1.jpg" alt="">
+                </div>
+                <div class="kriliFlex">
+                    <div class="flexbox">
+                        <div class="flexbox-icon">
+                            <i class="fa fa-tv"></i>
+                        </div>
+                         <div class="flexbox-heading">
+                            <a href="blogpageitem.html"><span>Krili havtret hyo gustripast</span></a> 
+                           <h4>Krili havtret hyo gustripast</h4>
+                         </div>
+                      </div>
+                      <div class="aflexbox">  
+                          <span>3.30.11</span>
+                          <div class="admin"> 
+                            <span>posted by: </span> <a href="#">Admin</a>
+                          </div>
+                      </div>
+                </div>
+                <div class="bborder-blog"></div>
+            
 
-          <div class="wrapper-content__krilli-img">
-            <img src="assets/img/img1.jpg" alt="">
-          </div>
-          <i class="fa fa-tv"></i>
-          <h1>Krili havtret hyo gustripast <span>3.30.11</span></h1>
-          <h4>Krili havtret hyo gustripast <span>posted by: <a href="#">Admin</a> </span></h4>
-          <div class="bborder-blog"></div>
-
-          <div class="wrapper-content__krilli-img">
-            <img src="assets/img/img1.jpg" alt="">
-          </div>
-          <i class="fa fa-tv"></i>
-          <h1>Krili havtret hyo gustripast <span>3.30.11</span></h1>
-          <h4>Krili havtret hyo gustripast <span>posted by: <a href="#">Admin</a> </span></h4>
-          <div class="bborder-blog"></div>
+          
 
           <div class="pager">
             <a href="#"><img src="assets/img/pagemover.png" alt=""></a>
@@ -380,12 +421,14 @@
     <!-- END WRAPPER -->
   </div>
   <script>
-    $(".tab_item").not(":first").hide();
-    $(".wrapper .tab").click(function () {
-      $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-      $(".tab_item").hide().eq($(this).index()).fadeIn()
-    }).eq(0).addClass("active");
-  </script>
+      $(document).ready(function () {
+        $(".tab_item").not(":first").hide();
+        $(".wrapper .tab").click(function () {
+          $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+          $(".tab_item").hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass("active");
+      });
+    </script>
 </body>
 
 </html>

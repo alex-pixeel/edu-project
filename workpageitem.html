@@ -108,9 +108,16 @@
           <div class="wrapper-content__krilli-img">
             <img src="assets/img/img1.jpg" alt="">
           </div>
-          <i class="fa fa-tv"></i>
-          <h1>Krili havtret hyo gustripast</h1>
-          <h4>Krili havtret hyo gustripast</h4>
+          <div class="flexbox">
+              <div class="flexbox-icon">
+                  <i class="fa fa-tv"></i>
+              </div>
+               <div class="flexbox-heading">
+                  <h1>Krili havtret hyo gustripast</h1>
+                <h4>Krili havtret hyo gustripast</h4>
+               </div>
+            </div>
+        
           <ul>
             <li>Client:<a href="#"> Global Corp</a></li>
             <li>Project Manager:<a href="#"> James R.Smith</a></li>
@@ -143,9 +150,17 @@
             <img class="hcoinN" src="assets/img/halfCoin.png" alt="">
             <img class="coin" src="assets/img/coin.png" alt="">
             <div class="johnD">
-              <i class="fa fa-microphone"></i>
-              <h1>Jayne W.Smith</h1>
-              <h4>COO-GalaxySmith,Inc</h4>
+                <div class="flexbox">
+                    <div class="flexbox-icon">
+                        <i class="fa fa-microphone"></i>
+                    </div>
+                     <div class="flexbox-heading">
+                        <h1>Jayne W.Smith</h1>
+                        <h4>COO-GalaxySmith,Inc</h4>
+                     </div>
+                  </div>
+              
+             
               <p>
                 <span>//</span> Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non
                 laoreet lacus lacus eleifend orci.
@@ -414,11 +429,13 @@
     <!-- END WRAPPER -->
   </div>
   <script>
-    $(".tab_item").not(":first").hide();
-    $(".wrapper .tab").click(function () {
-      $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-      $(".tab_item").hide().eq($(this).index()).fadeIn()
-    }).eq(0).addClass("active");
+    $(document).ready(function () {
+      $(".tab_item").not(":first").hide();
+      $(".wrapper .tab").click(function () {
+        $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".tab_item").hide().eq($(this).index()).fadeIn()
+      }).eq(0).addClass("active");
+    });
   </script>
 </body>
 

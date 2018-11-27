@@ -101,13 +101,27 @@
       <div class="wrapper-content">
         <!-- KRILI -->
         <div class="wrapper-content__krilli wrapper-content__krilliB">
-          <div class="wrapper-content__krilli-img">
-            <img src="assets/img/img1.jpg" alt="">
-          </div>
-          <i class="fa fa-tv"></i>
-          <h1>Krili havtret hyo gustripast <span>3.30.11</span></h1>
-          <h4>Krili havtret hyo gustripast <span>posted by: <a href="#">Admin</a> </span></h4>
-          <div class="bborder-blog"></div>
+            <div class="wrapper-content__krilli-img">
+                <img src="assets/img/img1.jpg" alt="">
+              </div>
+              <div class="kriliFlex">
+                  <div class="flexbox">
+                      <div class="flexbox-icon">
+                          <i class="fa fa-tv"></i>
+                      </div>
+                       <div class="flexbox-heading">
+                          <a href="blogpageitem.html"><span>Krili havtret hyo gustripast</span></a> 
+                         <h4>Krili havtret hyo gustripast</h4>
+                       </div>
+                    </div>
+                    <div class="aflexbox">  
+                        <span>3.30.11</span>
+                        <div class="admin"> 
+                          <span>posted by: </span> <a href="#">Admin</a>
+                        </div>
+                    </div>
+              </div>
+              <div class="bborder-blog"></div>
           <p>
             Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend
             orci.
@@ -168,7 +182,15 @@
           <a href="#" class="visitB visitBPI">share this</a>
           <div class="lattestComments">
             <div class="topborder"></div>
-            <h3>Latest Comments <span>33 Comments</span></h3>
+            <div class="flexbox latestflexbox">
+                <div class="flexbox-icon">
+                    <h3>Latest Comments </h3>
+                </div>
+                 <div class="flexbox-heading">
+                    <span>33 Comments</span>
+                 </div>
+              </div>
+           
             <div class="lcborder"></div>
             <div class="lattestComments-comment">
               <div class="lattestComments-comment__section">
@@ -182,7 +204,15 @@
                   <a href="#"><i class="fa fa-link"></i></a>
                 </div>
                 <div class="lattestComments-comment__section-main">
-                  <h3>John Doe <span>-23 mins ago</span> <span>12 Likes,0 Dislikes Comments</span></h3>
+                    <div class="flexbox latestflexbox">
+                        <div class="flexbox-icon">
+                            <h3>John Doe <span>-23 mins ago</span> </h3>
+                        </div>
+                         <div class="flexbox-heading">
+                            <span class="likedis">12 Likes,0 Dislikes Comments</span>
+                         </div>
+                      </div>
+                  
                   <p>
                     Nunc commodo aliquam lectus quis bibendum. Proin ut erat quis nulla tempor imperdiet ac et lorem.
                     ellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend
@@ -210,7 +240,14 @@
                   <a href="#"><i class="fa fa-link"></i></a>
                 </div>
                 <div class="lattestComments-comment__section-main">
-                  <h3>Kriss Epps <span>-23 mins ago</span> <span>12 Likes,0 Dislikes Comments</span></h3>
+                    <div class="flexbox latestflexbox">
+                        <div class="flexbox-icon">
+                            <h3>John Doe <span>-23 mins ago</span> </h3>
+                        </div>
+                         <div class="flexbox-heading">
+                            <span class="likedis">12 Likes,0 Dislikes Comments</span>
+                         </div>
+                      </div>
                   <p>
                     Nunc commodo aliquam lectus quis bibendum. Proin ut erat quis nulla tempor imperdiet ac et lorem.
                     ellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend
@@ -239,7 +276,14 @@
                   <a href="#"><i class="fa fa-link"></i></a>
                 </div>
                 <div class="lattestComments-comment__section-main">
-                  <h3>John Doe <span>-23 mins ago</span> <span>12 Likes,0 Dislikes Comments</span></h3>
+                    <div class="flexbox latestflexbox">
+                        <div class="flexbox-icon">
+                            <h3>John Doe <span>-23 mins ago</span> </h3>
+                        </div>
+                         <div class="flexbox-heading">
+                            <span class="likedis">12 Likes,0 Dislikes Comments</span>
+                         </div>
+                      </div>
                   <p>
                     Nunc commodo aliquam lectus quis bibendum. Proin ut erat quis nulla tempor imperdiet ac et lorem.
                     ellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend
@@ -519,12 +563,14 @@
     <!-- END WRAPPER -->
   </div>
   <script>
-    $(".tab_item").not(":first").hide();
-    $(".wrapper .tab").click(function () {
-      $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-      $(".tab_item").hide().eq($(this).index()).fadeIn()
-    }).eq(0).addClass("active");
-  </script>
+      $(document).ready(function () {
+        $(".tab_item").not(":first").hide();
+        $(".wrapper .tab").click(function () {
+          $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+          $(".tab_item").hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass("active");
+      });
+    </script>
 </body>
 
 </html>
