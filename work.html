@@ -193,7 +193,7 @@
                     </p>
                   </a>
                 </div>
-            
+
                 <div class="tab_item-blocks">
                     <div class="tab_item-blocks_video"></div>
                     <a href="#">
@@ -341,7 +341,7 @@
                       </p>
                     </a>
                   </div>
-              
+
                   <div class="tab_item-blocks">
                       <div class="tab_item-blocks_video"></div>
                       <a href="#">
@@ -386,21 +386,21 @@
                       </div>
               <!-- PAGINATION -->
               <div class="tab_item-paginagtion">
-                <a href=""><img src="assets/img/pagemover.png" alt=""></a>
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">4</a>
-                <a href="">5</a>
-                <a href="">6</a>
-                <a href="">7</a>
-                <a href="">8</a>
-                <a href="">9</a>
-                <a href="">10</a>
-                <a href="">11</a>
-                <a href="">...</a>
-                <a href="">33</a>
-                <a href=""><img src="assets/img/pagemover2.png" alt=""></a>
+                <a href="#!"><img src="assets/img/pagemover.png" alt=""></a>
+                <a href="#!">1</a>
+                <a href="#!">2</a>
+                <a href="#!">3</a>
+                <a href="#!">4</a>
+                <a href="#!">5</a>
+                <a href="#!">6</a>
+                <a href="#!">7</a>
+                <a href="#!">8</a>
+                <a href="#!">9</a>
+                <a href="#!">10</a>
+                <a href="#!">11</a>
+                <a href="#!">...</a>
+                <a href="#!">33</a>
+                <a href="#!"><img src="assets/img/pagemover2.png" alt=""></a>
               </div>
             </div>
           <!-- THIRD TABCONTENT -->
@@ -517,17 +517,19 @@
   </div>
   <script>
       $(document).ready(function () {
+
+        // tabs
         $(".tab_item").not(":first").hide();
         $(".wrapper .tab").click(function () {
           $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
           $(".tab_item").hide().eq($(this).index()).fadeIn()
         }).eq(0).addClass("active");
-      });
-      
-      $(document).ready(function () {
+
+        // pagination
         $(".tab_item-paginagtion a").click(function () {
           $(".tab_item-paginagtion a").removeClass("activePage").eq($(this).index()).addClass("activePage");
         }).eq(0).addClass("activePage");
+
       });
     </script>
 </body>
